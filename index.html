@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRS Project | Головна</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">IRS Project // HECU</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Головна</a></li>
+            <li><a href="rules.html">Правила</a></li>
+            <li><a href="charter.html">Статут</a></li>
+            <li><a href="admin.html">Правила адміністрації</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-banner">
+        <h1>Головна</h1>
+    </header>
+
+    <main class="main-content">
+        <div class="text-container">
+            <p class="section-title">Ласкаво просимо на сайт проєкту «IRS Project»</p>
+            <p>Ми — команда українських ентузіастів, які об'єдналися заради створення якісного та унікального ігрового досвіду в Garry's Mod. Наш флагманський сервер — «HL: HECU RP» — це військово-рольовий проєкт (жанр Military RP) із серйозним відіграшем, орієнтований винятково на українську спільноту.</p>
+
+            <p class="section-title">Про сервер «HL: HECU RP»</p>
+            <p>Це не просто ще один RP-сервер. Це повністю авторський світ, де ми поєднали атмосферу катастрофи в Чорній Мезі, суворі реалії військового статуту США та боротьбу за виживання. Ви не побачите тут звичних шаблонів — світ зруйновано, а залишки людства існують за своїми особливими правилами.</p>
+            <p>Світ перебуває в стані глобального краху та портальних штормів. Гравців очікує тактичний геймплей, командна взаємодія, розвиток бази та участь у подіях, що назавжди змінять хід альтернативної історії.</p>
+        </div>
+
+        <div class="team-section">
+            <div class="team-collapse" id="teamToggle">
+                <div class="team-title-bar">
+                    <h2 class="team-title">Поточне керівництво</h2>
+                    <span class="toggle-icon">+</span>
+                </div>
+
+                <div class="team-content-wrapper">
+                    <div class="team-content-inner">
+                        <hr class="team-divider">
+
+                        <div class="team-container">
+                            <div class="leader-row">
+                                <div class="team-card">
+                                    <img src="https://i.pinimg.com/736x/d2/95/d2/d295d2696f3077f4211f840de66eee3b.jpg" alt="Аватар" class="team-avatar">
+                                    <div class="team-name">alexeyyt4</div>
+                                    <div class="team-role">ГОЛОВА СЕРВЕРУ</div>
+                                </div>
+                            </div>
+
+                            <div class="deputies-row">
+                                <div class="team-card">
+                                    <img src="https://via.placeholder.com/250" alt="Аватар" class="team-avatar">
+                                    <div class="team-name">Вакантно</div>
+                                    <div class="team-role">Зам.голови по РП-кураторству</div>
+                                </div>
+
+                                <div class="team-card">
+                                    <img src="https://via.placeholder.com/250" alt="Аватар" class="team-avatar">
+                                    <div class="team-name">Вакантно</div>
+                                    <div class="team-role">Зам.голови по ГеймМастерству</div>
+                                </div>
+
+                                <div class="team-card">
+                                    <img src="https://via.placeholder.com/250" alt="Аватар" class="team-avatar">
+                                    <div class="team-name">Вакантно</div>
+                                    <div class="team-role">Зам.голови по адміністрації</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <footer>
+            <p>&copy; 2026 IRS Project. Усі права захищено.</p>
+        </footer>
+        </div>
+        <script>
+        // Скрипт для плавного розгортання блоку "Керівництво"
+        const teamToggle = document.getElementById('teamToggle');
+        if (teamToggle) {
+            const titleBar = teamToggle.querySelector('.team-title-bar');
+            titleBar.addEventListener('click', () => {
+                teamToggle.classList.toggle('is-open');
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            // Знаходимо всі посилання в навігаційному меню
+            const links = document.querySelectorAll('.nav-links a');
+
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Якщо гравець клікає на сторінку, на якій вже знаходиться - ігноруємо
+                    if (this.href === window.location.href) return;
+
+                    e.preventDefault(); // Зупиняємо миттєвий жорсткий перехід
+                    const target = this.href; // Запам'ятовуємо, куди хотів перейти гравець
+
+                    // Додаємо тілу сторінки клас зникнення
+                    document.body.classList.add('fade-out');
+
+                    // Чекаємо 300 мілісекунд (поки програється CSS анімація) і робимо перехід
+                    setTimeout(() => {
+                        window.location.href = target;
+                    }, 300);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
