@@ -297,3 +297,85 @@ footer {
     font-size: 0.9rem;
     padding-bottom: 20px;
 }
+
+
+/* =========================================
+   АДАПТАЦІЯ ПІД МОБІЛЬНІ ПРИСТРОЇ (ТЕЛЕФОНИ)
+========================================= */
+@media screen and (max-width: 768px) {
+    /* 1. Навігаційне меню: робимо його вертикальним або переносимо кнопки */
+    .navbar {
+        flex-direction: column;
+        padding: 15px 10px;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+
+    /* 2. Головний банер: зменшуємо висоту та розмір тексту */
+    .hero-banner {
+        height: 200px;
+    }
+
+    .hero-banner h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    /* 3. Основний текст: зменшуємо відступи по боках */
+    .main-content {
+        padding: 30px 15px;
+    }
+
+    .text-container {
+        font-size: 1rem; /* Трохи менший шрифт для зручного читання */
+    }
+
+    /* 4. Термінал (для Правил та Статуту): економимо місце */
+    .container {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .terminal-box {
+        padding: 15px;
+        border-left: 3px solid #2ea043; /* Тонша рамка збоку */
+        font-size: 0.9rem;
+    }
+
+    ul {
+        padding-left: 15px; /* Менший відступ для списків */
+    }
+
+    /* 5. Блок керівництва: центруємо та адаптуємо відступи */
+    .team-title {
+        font-size: 1.4rem;
+    }
+
+    .team-container {
+        gap: 30px;
+    }
+
+    .deputies-row {
+        gap: 20px;
+    }
+
+    /* Картки трохи зменшуємо, щоб вони не прилипали до країв екрану */
+    .team-card {
+        width: 200px;
+    }
+
+    .team-avatar {
+        width: 200px;
+        height: 200px;
+    }
+}
