@@ -379,3 +379,29 @@ footer {
         height: 200px;
     }
 }
+
+
+
+/* =========================================
+ * БЛОК ДОНАТІВ (MONOBANK)
+ = *======================================== */
+.donation-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto; /* Отступы сверху и снизу */
+    padding: 20px;
+    max-width: 900px;
+    background-color: #1e2124; /* Цвет под стать твоему "терминалу" */
+    border: 1px solid #3a4047;
+    border-radius: 8px;
+}
+
+/* Адаптация под телефоны */
+@media screen and (max-width: 400px) {
+    .donation-widget iframe {
+        /* Если экран телефона очень узкий, сжимаем виджет */
+        width: 100%; 
+        max-width: 380px;
+    }
+}
